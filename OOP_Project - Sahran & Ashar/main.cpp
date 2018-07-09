@@ -8,10 +8,14 @@
 //#include "Queue.h"
 #include "Unit.h"
 #include "Rastan.h"
+#include"Bandit.h"
+#include"GameScreen.h"
 //#include "Enemy.h"
 //#include "Bullet.h"
 
 //Pre defined screen width and height
+
+using namespace std;
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
@@ -41,6 +45,7 @@ int main( int argc, char* args[] )
 	}
 	else
 	{
+
 		//Load media
 		if( !loadMedia() )
 		{
@@ -48,6 +53,7 @@ int main( int argc, char* args[] )
 		}
 		else
 		{
+
 			bool quit = false;                      //Main loop flag
 
 			SDL_Event e;                            //Event handler
@@ -63,9 +69,12 @@ int main( int argc, char* args[] )
 
 			//Queue objectList;
 
-			Unit* rastan = new Rastan(&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT/2);  //Need to set positioning of Rastan according to the map
+			Unit* rastan = new Rastan(&gSpriteSheetTexture, (float)SCREEN_WIDTH*0.35, (float)SCREEN_HEIGHT*0.75);  //Need to set positioning of Rastan according to the map
 			//Unit* enemy = NULL;
-            //Unit* bullet = NULL;
+            //Unit* bullet = NULL;j
+            cout << "AWD" << endl;
+            Bandit b(&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT/2);
+            GameScreen g (&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT/2);
 
 			while( !quit )                          //While application is running
 			{
@@ -92,7 +101,11 @@ int main( int argc, char* args[] )
                     if(currentKeyStates[ SDL_SCANCODE_RIGHT ])
                     {
                         rastan -> Move(RIGHT);
+                        g.MoveBackground();
+
+                        frame++;
                     }
+
 /*
                     if(currentKeyStates[ SDL_SCANCODE_SPACE ])
                     {
@@ -106,14 +119,18 @@ int main( int argc, char* args[] )
 
                     }
 */
+                cout<<"AWD"<<endl;
 				SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );    //Clear screen
 				SDL_RenderClear( gRenderer );
 /*
                 objectList.Render(frame, gRenderer, false);
                 objectList.Move();
 */
-                rastan -> Render(frame, gRenderer, false);
-                rastan -> Move();
+
+                g.Render(frame,gRenderer,true);
+                rastan -> Render(frame, gRenderer, true);
+                //b.Render(frame, gRenderer, true);
+                //rastan -> Move();
 
                 //objectList.Clean();
 				SDL_RenderPresent( gRenderer );       //Update screen

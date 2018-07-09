@@ -1,8 +1,19 @@
-//#pragma once
-/*
-class Bandit:publc Unit
+#ifndef BANDIT_H
+#define BANDIT_H
+#include"Unit.h"
+
+
+class Bandit:public Unit
 {
-private:
-    int hitChanceBandit;
+    public:
+        Bandit();
+        ~Bandit();
+        Bandit(LTexture*,float,float);
+        void Render(long int&, SDL_Renderer*,bool);
+
+    protected:
+
+    private:
 };
-*/
+
+#endif // BANDIT_H

@@ -44,6 +44,8 @@
 		<Unit filename="Bandit.h" />
 		<Unit filename="Battle.cpp" />
 		<Unit filename="Battle.h" />
+		<Unit filename="GameScreen.cpp" />
+		<Unit filename="GameScreen.h" />
 		<Unit filename="LTexture.cpp" />
 		<Unit filename="LTexture.h" />
 		<Unit filename="Rastan.cpp" />

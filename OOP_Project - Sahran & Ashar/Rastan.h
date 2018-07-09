@@ -10,8 +10,8 @@ private:
     //Weapon weapon;
 protected:
     enum ANIMATION_FRAMES {MAIN_OBJECT = 3};
-    SDL_Rect spriteClips[ MAIN_OBJECT ];
-    LTexture* spriteSheetTexture;
+    //SDL_Rect spriteClips[ MAIN_OBJECT ];
+    //LTexture* spriteSheetTexture;
 
 public:
     Rastan();

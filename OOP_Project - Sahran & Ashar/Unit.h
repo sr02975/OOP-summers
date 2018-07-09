@@ -4,10 +4,12 @@
 #include <stdio.h>
 #include <iostream>
 #include"LTexture.h"
+//#include"GameScreen.h"
 
 using namespace std;
 
 enum MOTION {RIGHT};
+enum TYPE {ENEMY,WEAPON};
 
 class Unit
 {
@@ -16,13 +18,17 @@ class Unit
     protected:
 
         bool alive;
+        int type;
         float x;
         float y;
         int width;
         int height;
+        float speedx;
+        float speedy;
+        float friction;
 
-        enum ANIMATION_FRAMES {MAIN_OBJECT_FRAMES = 3};
-        SDL_Rect spriteClips[ MAIN_OBJECT_FRAMES ];
+        //enum ANIMATION_FRAMES {MAIN_OBJECT_FRAMES = 3};
+        SDL_Rect* spriteClips;
         LTexture* spriteSheetTexture;
 
     public:

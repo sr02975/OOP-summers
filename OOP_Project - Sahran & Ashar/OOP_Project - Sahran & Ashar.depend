@@ -382,3 +382,57 @@
 	"begin_code.h"
 	"close_code.h"
 
+1531134601 source:c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\bandit.cpp
+	"Bandit.h"
+
+1531050597 source:c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\battle.cpp
+
+1530771338 source:c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\ltexture.cpp
+	"LTexture.h"
+
+1531053185 c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\ltexture.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+
+1531135905 source:c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	"LTexture.h"
+	"Unit.h"
+	"Rastan.h"
+	"Bandit.h"
+	"GameScreen.h"
+
+1531134623 c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\unit.h
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<iostream>
+	"LTexture.h"
+
+1531133823 c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\rastan.h
+	"Unit.h"
+
+1531135612 source:c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\rastan.cpp
+	"Rastan.h"
+	"Unit.h"
+	<iostream>
+
+1531135612 source:c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\unit.cpp
+	"Unit.h"
+
+1531122611 c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\bandit.h
+	"Unit.h"
+
+1531135905 source:c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\gamescreen.cpp
+	"GameScreen.h"
+
+1531135905 c:\users\sahran riaz\documents\oop final project\oop-summers\oop_project - sahran & ashar\gamescreen.h
+	"Unit.h"
+
