@@ -27,13 +27,13 @@ void GameScreen::MoveBackground()
 {
     if(spriteClips.x+800!=1020)
     {
-        spriteClips.x+=2;
+        spriteClips.x+=1;
 
     }
     else
     {
         spriteClips.x=120;
-        spriteClips.x+=2;
+        spriteClips.x+=1;
     }
 }
 

@@ -70,10 +70,11 @@ int main( int argc, char* args[] )
 			//Queue objectList;
 
 			Unit* rastan = new Rastan(&gSpriteSheetTexture, (float)SCREEN_WIDTH*0.35, (float)SCREEN_HEIGHT*0.75);  //Need to set positioning of Rastan according to the map
+			Unit* bandit = new Bandit(&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT*0.68);
 			//Unit* enemy = NULL;
             //Unit* bullet = NULL;j
-            cout << "AWD" << endl;
-            Bandit b(&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT/2);
+            //cout << "AWD" << endl;
+            //Bandit b(&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT/2);
             GameScreen g (&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT/2);
 
 			while( !quit )                          //While application is running
@@ -119,7 +120,7 @@ int main( int argc, char* args[] )
 
                     }
 */
-                cout<<"AWD"<<endl;
+                //cout<<"AWD"<<endl;
 				SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );    //Clear screen
 				SDL_RenderClear( gRenderer );
 /*
@@ -129,6 +130,7 @@ int main( int argc, char* args[] )
 
                 g.Render(frame,gRenderer,true);
                 rastan -> Render(frame, gRenderer, true);
+                bandit -> Render(frame, gRenderer, true);
                 //b.Render(frame, gRenderer, true);
                 //rastan -> Move();
 
@@ -140,6 +142,7 @@ int main( int argc, char* args[] )
 
 			}
 			delete rastan;
+			delete bandit;
 		}
 	}
 

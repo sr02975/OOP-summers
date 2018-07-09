@@ -1,6 +1,7 @@
 #include "Rastan.h"
 #include "Unit.h"
 #include <iostream>
+
 using namespace std;
 
 Rastan::Rastan()
@@ -18,7 +19,7 @@ Rastan::Rastan(LTexture* image, float x, float y):Unit(image, x, y)
 {
     spriteClips = new SDL_Rect[3];
     this->spriteSheetTexture = image;
-    //cout << "ADWDAWDA";
+
     //Frame 0
     spriteClips[ 0 ].x = 150;
     spriteClips[ 0 ].y = 2394;

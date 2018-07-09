@@ -12,6 +12,7 @@ class Bandit:public Unit
         void Render(long int&, SDL_Renderer*,bool);
 
     protected:
+        enum ANIMATION_FRAMES {MAIN_OBJECT = 3};
 
     private:
 };
