@@ -9,6 +9,7 @@ class Bandit:public Unit
         Bandit();
         ~Bandit();
         Bandit(LTexture*,float,float);
+        void Move();
         void Render(long int&, SDL_Renderer*,bool);
 
     protected:

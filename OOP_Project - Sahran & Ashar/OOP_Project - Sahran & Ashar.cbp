@@ -44,14 +44,20 @@
 		<Unit filename="Bandit.h" />
 		<Unit filename="Battle.cpp" />
 		<Unit filename="Battle.h" />
+		<Unit filename="Character.cpp" />
+		<Unit filename="Character.h" />
 		<Unit filename="GameScreen.cpp" />
 		<Unit filename="GameScreen.h" />
 		<Unit filename="LTexture.cpp" />
 		<Unit filename="LTexture.h" />
+		<Unit filename="Point.cpp" />
+		<Unit filename="Point.h" />
 		<Unit filename="Rastan.cpp" />
 		<Unit filename="Rastan.h" />
 		<Unit filename="Unit.cpp" />
 		<Unit filename="Unit.h" />
+		<Unit filename="Word.cpp" />
+		<Unit filename="Word.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

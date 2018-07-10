@@ -48,6 +48,24 @@ Bandit::Bandit(LTexture* image, float x, float y):Unit(image,x,y)
     this->height = spriteClips[ 0 ].h;
 }
 
+void Bandit::Move()
+{
+     if (x != 450)
+     {
+         x = x - 2;
+     }
+
+     /*else if (x == 450)
+     {
+
+     }*/
+
+     if(x < -100)
+     {
+         SetAlive(false);
+     }
+}
+
 void Bandit::Render(long int& frame, SDL_Renderer* gRenderer, bool debug)
 {
     spriteSheetTexture->Render( x - width/4, y - height/4, &spriteClips[ frame % 3 ], 0.0, NULL, SDL_FLIP_NONE, gRenderer );

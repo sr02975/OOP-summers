@@ -10,6 +10,9 @@
 #include "Rastan.h"
 #include"Bandit.h"
 #include"GameScreen.h"
+#include "Word.h"
+#include "Character.h"
+#include "Point.h"
 //#include "Enemy.h"
 //#include "Bullet.h"
 
@@ -31,6 +34,7 @@ SDL_Window* gWindow = NULL;
 SDL_Renderer* gRenderer = NULL;
 
 LTexture gSpriteSheetTexture;
+LTexture gFontSpriteSheet;
 
 bool init();
 bool loadMedia();
@@ -70,7 +74,8 @@ int main( int argc, char* args[] )
 			//Queue objectList;
 
 			Unit* rastan = new Rastan(&gSpriteSheetTexture, (float)SCREEN_WIDTH*0.35, (float)SCREEN_HEIGHT*0.75);  //Need to set positioning of Rastan according to the map
-			Unit* bandit = new Bandit(&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT*0.68);
+			//Unit* bandit = new Bandit(&gSpriteSheetTexture, (float)SCREEN_WIDTH/2, (float)SCREEN_HEIGHT*0.68);
+			Unit* bandit = new Bandit(&gSpriteSheetTexture,(float)SCREEN_WIDTH + 50/*rastan->GetX()*/, /*rastan->GetY() - rastan->GetHeight()/2*/(float)SCREEN_HEIGHT*0.68);
 			//Unit* enemy = NULL;
             //Unit* bullet = NULL;j
             //cout << "AWD" << endl;
@@ -101,10 +106,17 @@ int main( int argc, char* args[] )
 
                     if(currentKeyStates[ SDL_SCANCODE_RIGHT ])
                     {
-                        rastan -> Move(RIGHT);
-                        g.MoveBackground();
+                        if (bandit -> GetX() != 450)
+                        {
+                            rastan -> Move(RIGHT);
+                            g.MoveBackground();
+                            bandit -> Move();
+                            frame++;
+                        }
+                        else
+                        {
 
-                        frame++;
+                        }
                     }
 
 /*
@@ -213,6 +225,12 @@ bool loadMedia()
 
 	//Load sprite sheet texture
 	if( !gSpriteSheetTexture.LoadFromFile( "image/collage.png", gRenderer  ) )
+	{
+		printf( "Failed to load sprite sheet texture!\n" );
+		success = false;
+	}
+
+	if( !gFontSpriteSheet.LoadFromFile( "image/collage.png", gRenderer  ) )
 	{
 		printf( "Failed to load sprite sheet texture!\n" );
 		success = false;
